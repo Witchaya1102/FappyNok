@@ -17,7 +17,7 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        Debug.Log("Shoot");
+        // Debug.Log("Shoot");
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
