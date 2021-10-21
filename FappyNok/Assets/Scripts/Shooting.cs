@@ -6,13 +6,22 @@ public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public float cooldownTime;
+    private float nextFireTime = 0.0f;
    
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        
+        if (Time.time > nextFireTime)
         {
-            Shoot();
+           if (Input.GetMouseButtonDown(0))
+            {
+                Shoot();
+                nextFireTime = Time.time + cooldownTime;
+            } 
         }
+    
+        
     }
 
     void Shoot()

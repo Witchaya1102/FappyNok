@@ -17,5 +17,19 @@ public class CollisionTrigger : MonoBehaviour
             Destroy(gameObject);
                
         }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Player Dead");
+        }
+
+        if (collision.gameObject.tag == "Finish")
+        {
+            Destroy(gameObject);   
+        }
+
+
+
+    
     }
 }
