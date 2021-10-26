@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;
+    public int highScore;
     public float scoreAmount;
     public float scoreIncreasedPerSecond;
 
@@ -14,13 +15,22 @@ public class ScoreManager : MonoBehaviour
     {
         scoreAmount = 0f;
         scoreIncreasedPerSecond = 1f;
-
+        
     }
 
     void Update()
     {
         scoreText.text = "Score: " + (int)scoreAmount;
         scoreAmount += scoreIncreasedPerSecond * Time.deltaTime;
+        AddHighScore((int)scoreAmount);
+    }
+    
+    public void AddHighScore(int score)
+    {
+        if (score > highScore)
+        {
+            highScore = score;
+        }
     }
 
 }
