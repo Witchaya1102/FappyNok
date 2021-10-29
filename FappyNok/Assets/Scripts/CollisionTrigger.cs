@@ -25,7 +25,6 @@ namespace Scripts
             {
                 Debug.Log("Destroy");
                 Destroy(gameObject);
-
             }
 
             if (collision.gameObject.tag == "Enemy") //for player
