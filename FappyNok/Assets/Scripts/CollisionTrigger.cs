@@ -7,6 +7,9 @@ namespace Scripts
     
     public class CollisionTrigger : MonoBehaviour
     {
+        public GameOverUI GameOverUI;
+        public ScoreManager scoreAmount;
+        public ScoreManager highScoreText;
         bool isPlayerDead = false;
 
         void OnCollisionEnter2D(Collision2D collision)
@@ -40,7 +43,7 @@ namespace Scripts
             {
                 Time.timeScale = 0f;
                 Debug.Log("GAME OVER");
-
+                GameOverUI.Setup(scoreAmount, highScoreText);
             }
         }
     }
