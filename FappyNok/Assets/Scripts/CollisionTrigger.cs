@@ -28,10 +28,16 @@ public class CollisionTrigger : MonoBehaviour
                 isPlayerDead = true;
             }
 
-            if (collision.gameObject.tag == "Finish") //for de-spawn enemy/bullet
+            if (collision.gameObject.tag == "Bomb") //for player
             {
-                Destroy(gameObject);
+                Debug.Log("Player Dead");
+                isPlayerDead = true;
             }
+
+            if (collision.gameObject.tag == "Finish") //for de-spawn enemy/bullet
+                {
+                    Destroy(gameObject);
+                }
 
             if (isPlayerDead == true) //check: player status
             {
@@ -44,9 +50,7 @@ public class CollisionTrigger : MonoBehaviour
         public void GameOver()
         {
             Time.timeScale = 0f;
-        //GameOverUI.Setup();
         GameOverUI.SetActive(true);
-        /*GameOverUI.Setup(score, highScore);*/ //ยังติดแดง ไปต้อไม่ถูก
-    }
+        }
 
     }   

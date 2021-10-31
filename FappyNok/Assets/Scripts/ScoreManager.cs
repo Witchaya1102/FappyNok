@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -18,7 +19,8 @@ public class ScoreManager : MonoBehaviour
     {
         scoreAmount = 0f;
         scoreIncreasedPerSecond = 1;
-        
+        highScore = PlayerPrefs.GetInt("HighScore");
+        highScoreTextGameOver.text = highScore.ToString();
     }
 
     void Update()
@@ -40,8 +42,21 @@ public class ScoreManager : MonoBehaviour
         if (score > highScore)
         {
             highScore = score;
+            PlayerPrefs.SetInt("HighScore", highScore);
             highScoreTextGameOver.text = "HIGHSCORE: " + highScore;
         }
+    }
+
+    public void RestartButton()
+    {
+        SceneManager.LoadScene("Game");
+        Time.timeScale = 1;
+        scoreAmount = 0;
+    }
+
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene("HomePage");
     }
 
 }

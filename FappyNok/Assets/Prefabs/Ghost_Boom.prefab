@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5779b81cfdd0748bb3f466c7ec3f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverUI: {fileID: 0}
 --- !u!95 &-5172570500975369132
 Animator:
   serializedVersion: 3
