@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameOverUI GameOverUI;
+    //public GameOverUI GameOverUI;
     public int scoreAmount;
     public int highScoreText;
 
@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
         if(Time.timeScale == 0f)
         {
             Debug.Log("Game Stop");
-            GameOverUI.Setup(scoreAmount, highScoreText);
+            //GameOverUI.Setup(scoreAmount, highScoreText);
         }
     }
 }

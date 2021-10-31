@@ -9,16 +9,12 @@ using UnityEngine.UI;
 public class CollisionTrigger : MonoBehaviour
     {
         bool isPlayerDead = false;
+        public GameObject GameOverUI;
+        
 
 
         void OnCollisionEnter2D(Collision2D collision)
         {
-
-            if (collision.gameObject.tag == "Player") //for floor
-            {
-                Debug.Log("Player Dead");
-                isPlayerDead = true;
-            }
 
             if (collision.gameObject.tag == "Bullet") //for bullet
             {
@@ -48,42 +44,9 @@ public class CollisionTrigger : MonoBehaviour
         public void GameOver()
         {
             Time.timeScale = 0f;
-            /*GameOverUI.Setup(score, highScore);*/ //ยังติดแดง ไปต้อไม่ถูก
-        }
-    
-    
-        //score manager
-        public Text scoreText;
-        public int highScore;
-        public int score;
-        public float scoreAmount;
-        public int scoreIncreasedPerSecond;
+        //GameOverUI.Setup();
+        GameOverUI.SetActive(true);
+        /*GameOverUI.Setup(score, highScore);*/ //ยังติดแดง ไปต้อไม่ถูก
+    }
 
-        void Start()
-        {
-            scoreAmount = 0f;
-            scoreIncreasedPerSecond = 1;
-
-        }
-
-        void Update()
-        {
-            AddScore();
-        }
-
-        public void AddScore()
-        {
-            scoreText.text = "Score: " + (int)scoreAmount;
-            scoreAmount += scoreIncreasedPerSecond * Time.deltaTime;
-            score = (int)scoreAmount;
-            AddHighScore((int)scoreAmount);
-        }
-
-        public void AddHighScore(int score)
-        {
-            if (score > highScore)
-            {
-                highScore = score;
-            }
-        }
     }   

@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 12576200}
   - component: {fileID: 12576199}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Score(in-game)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,6 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be225e41fc715e0498cb66d0ddb48620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverUI: {fileID: 593163549}
 --- !u!114 &591980259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,7 +703,6 @@ GameObject:
   - component: {fileID: 593163550}
   - component: {fileID: 593163552}
   - component: {fileID: 593163551}
-  - component: {fileID: 593163553}
   m_Layer: 5
   m_Name: Gameover_BG
   m_TagString: Untagged
@@ -771,20 +771,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593163549}
   m_CullTransparentMesh: 0
---- !u!114 &593163553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593163549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a759b257592898840b7ab126fd9f1794, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1992747603}
-  highScoreText: {fileID: 182533176}
 --- !u!1 &643349508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,7 +1039,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 12576199}
-  highScoreText: 0
+  scoreTextGameOver: {fileID: 1992747603}
+  highScoreTextGameOver: {fileID: 182533176}
+  highScore: 0
   scoreAmount: 0
   scoreIncreasedPerSecond: 0
 --- !u!4 &985752510
