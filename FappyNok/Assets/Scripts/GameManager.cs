@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    bool gameHasEnded = false;
+    //public GameOverUI GameOverUI;
+    public int scoreAmount;
+    public int highScoreText;
+
     public void EndGame()
     {
-        Debug.Log("GAME OVER");
-        StopGame();
-    }
-
-    void StopGame()
-    {
-        Time.timeScale = 0f;
+        if(Time.timeScale == 0f)
+        {
+            Debug.Log("Game Stop");
+            //GameOverUI.Setup(scoreAmount, highScoreText);
+        }
     }
 }

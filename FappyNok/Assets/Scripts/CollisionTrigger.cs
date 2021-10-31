@@ -1,25 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
 
-namespace Scripts
-{
-    
-    public class CollisionTrigger : MonoBehaviour
+
+
+public class CollisionTrigger : MonoBehaviour
     {
-        public GameOverUI GameOverUI;
-        public ScoreManager scoreAmount;
-        public ScoreManager highScoreText;
         bool isPlayerDead = false;
+        public GameObject GameOverUI;
+        
+
 
         void OnCollisionEnter2D(Collision2D collision)
         {
-                
-            if (collision.gameObject.tag == "Player") //for floor
-            {
-                Debug.Log("Player Dead");
-                isPlayerDead = true;
-            }
 
             if (collision.gameObject.tag == "Bullet") //for bullet
             {
@@ -40,10 +35,18 @@ namespace Scripts
 
             if (isPlayerDead == true) //check: player status
             {
-                Time.timeScale = 0f;
+                GameOver();
                 Debug.Log("GAME OVER");
-                GameOverUI.Setup(scoreAmount, highScoreText);
+
             }
         }
+
+        public void GameOver()
+        {
+            Time.timeScale = 0f;
+        //GameOverUI.Setup();
+        GameOverUI.SetActive(true);
+        /*GameOverUI.Setup(score, highScore);*/ //ยังติดแดง ไปต้อไม่ถูก
     }
-}
+
+    }   
