@@ -5,8 +5,8 @@ using UnityEngine;
 public class Enemy_Bomb : MonoBehaviour
 {
     public GameOverUI GameOverUI;
-    public ScoreManager scoreAmount;
-    public ScoreManager highScoreText;
+    public int scoreAmount;
+    public int highScoreText;
 
     void OnCollisionEnter2D(Collision2D collision)
     {

@@ -7,11 +7,13 @@ public class GameOverUI : MonoBehaviour
 {
     public Text scoreText;
     public Text highScoreText;
+    public int score;
+    public int highScore;
 
-    public void Setup(ScoreManager score, ScoreManager highScore)
+    public void Setup(int score, int highScore)
     {
         gameObject.SetActive(true);
-        highScoreText.text = ($"HIGHSCORE: {highScore.ToString()}");
-        scoreText.text = ($"SCORE: {score.ToString()}");
+        highScoreText.text = ($"HIGHSCORE: {highScore}");
+        scoreText.text = ($"SCORE: {score}");
     }
 }
