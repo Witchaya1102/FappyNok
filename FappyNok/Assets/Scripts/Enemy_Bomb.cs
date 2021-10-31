@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Enemy_Bomb : MonoBehaviour
 {
+    public GameObject GameOverUI;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -13,8 +15,7 @@ public class Enemy_Bomb : MonoBehaviour
         {
             Destroy(gameObject);
             Debug.Log("Boom");
-            Time.timeScale = 0f;
-            Debug.Log("GAME OVER");
+            GameOver();
         }
 
         if (collision.gameObject.tag == "Finish")
@@ -22,6 +23,11 @@ public class Enemy_Bomb : MonoBehaviour
             Destroy(gameObject);   
         }
 
-    
+    }
+
+    public void GameOver()
+    {
+        Time.timeScale = 0f;
+        GameOverUI.SetActive(true);
     }
 }
