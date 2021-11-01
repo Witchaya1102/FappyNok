@@ -23,18 +23,20 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            Destroy(collision.collider.gameObject);
             Destroy(gameObject);
         }
 
         if (collision.gameObject.tag == "Bomb")
         {
             Debug.Log("Hit Bomb");
-            Destroy(gameObject);
             GameOver();
+            Destroy(gameObject);
+            
         }
         
     }
-    
+
     public void GameOver()
     {
         Time.timeScale = 0f;
