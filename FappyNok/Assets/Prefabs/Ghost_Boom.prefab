@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3124069266704148505}
   - component: {fileID: 4750245979717162861}
   - component: {fileID: 6262363234790075241}
-  - component: {fileID: -1838117517591844467}
   - component: {fileID: -5172570500975369132}
   m_Layer: 1
   m_Name: Ghost_Boom
@@ -146,19 +145,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-1838117517591844467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303245800296337954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db5779b81cfdd0748bb3f466c7ec3f83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameOverUI: {fileID: 0}
 --- !u!95 &-5172570500975369132
 Animator:
   serializedVersion: 3

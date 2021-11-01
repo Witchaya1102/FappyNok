@@ -16,12 +16,6 @@ public class CollisionTrigger : MonoBehaviour
         void OnCollisionEnter2D(Collision2D collision)
         {
 
-            if (collision.gameObject.tag == "Bullet") //for bullet
-            {
-                Debug.Log("Destroy");
-                Destroy(gameObject);
-            }
-
             if (collision.gameObject.tag == "Enemy") //for player
             {
                 Debug.Log("Player Dead");
