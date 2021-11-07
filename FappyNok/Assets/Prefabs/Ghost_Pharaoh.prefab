@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1264553552912079311}
   - component: {fileID: 1879588774913724209}
   - component: {fileID: 6218732397668732678}
-  - component: {fileID: -4384690529545100730}
   m_Layer: 1
   m_Name: Ghost_Pharaoh
   m_TagString: Enemy
@@ -123,15 +122,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!114 &-4384690529545100730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264553552912079310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be225e41fc715e0498cb66d0ddb48620, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

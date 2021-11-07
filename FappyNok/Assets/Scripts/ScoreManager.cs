@@ -3,26 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;
+    public Text scoreTextGameOver;
+    public Text highScoreTextGameOver;
     public int highScore;
     public float scoreAmount;
-    public float scoreIncreasedPerSecond;
+    public int scoreIncreasedPerSecond;
+    
 
     void Start()
     {
         scoreAmount = 0f;
-        scoreIncreasedPerSecond = 1f;
-        
+        scoreIncreasedPerSecond = 1;
+        highScore = PlayerPrefs.GetInt("HighScore");
+        highScoreTextGameOver.text = highScore.ToString();
     }
 
     void Update()
     {
+        AddScore();
+    }
+
+    public void AddScore()
+    {
         scoreText.text = "Score: " + (int)scoreAmount;
         scoreAmount += scoreIncreasedPerSecond * Time.deltaTime;
         AddHighScore((int)scoreAmount);
+        
+        scoreTextGameOver.text = "SCORE: " + (int)scoreAmount;
     }
     
     public void AddHighScore(int score)
@@ -30,7 +42,21 @@ public class ScoreManager : MonoBehaviour
         if (score > highScore)
         {
             highScore = score;
+            PlayerPrefs.SetInt("HighScore", highScore);
+            highScoreTextGameOver.text = "HIGHSCORE: " + highScore;
         }
+    }
+
+    public void RestartButton()
+    {
+        SceneManager.LoadScene("Game");
+        Time.timeScale = 1;
+        scoreAmount = 0;
+    }
+
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene("HomePage");
     }
 
 }
