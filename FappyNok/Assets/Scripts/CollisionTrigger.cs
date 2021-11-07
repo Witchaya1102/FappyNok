@@ -1,29 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
 
-namespace Scripts
-{
-    
-    public class CollisionTrigger : MonoBehaviour
+
+
+public class CollisionTrigger : MonoBehaviour
     {
         bool isPlayerDead = false;
+        public GameObject GameOverUI;
+        
+
 
         void OnCollisionEnter2D(Collision2D collision)
         {
-                
-            if (collision.gameObject.tag == "Player") //for floor
-            {
-                Debug.Log("Player Dead");
-                isPlayerDead = true;
-            }
-
-            if (collision.gameObject.tag == "Bullet") //for bullet
-            {
-                Debug.Log("Destroy");
-                Destroy(gameObject);
-
-            }
 
             if (collision.gameObject.tag == "Enemy") //for player
             {
@@ -31,17 +22,29 @@ namespace Scripts
                 isPlayerDead = true;
             }
 
-            if (collision.gameObject.tag == "Finish") //for de-spawn enemy/bullet
+            if (collision.gameObject.tag == "Bomb") //for player
             {
-                Destroy(gameObject);
+                Debug.Log("Player Dead");
+                isPlayerDead = true;
             }
+
+            if (collision.gameObject.tag == "Finish") //for de-spawn enemy/bullet
+                {
+                    Destroy(gameObject);
+                }
 
             if (isPlayerDead == true) //check: player status
             {
-                Time.timeScale = 0f;
+                GameOver();
                 Debug.Log("GAME OVER");
 
             }
         }
-    }
-}
+
+        public void GameOver()
+        {
+            Time.timeScale = 0f;
+        GameOverUI.SetActive(true);
+        }
+
+    }   
