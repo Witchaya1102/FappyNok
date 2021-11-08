@@ -25,10 +25,10 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        AddScore();
+        AddScoreTime();
     }
 
-    public void AddScore()
+    public void AddScoreTime()
     {
         scoreText.text = "Score: " + (int)scoreAmount;
         scoreAmount += scoreIncreasedPerSecond * Time.deltaTime;
@@ -36,7 +36,13 @@ public class ScoreManager : MonoBehaviour
         
         scoreTextGameOver.text = "SCORE: " + (int)scoreAmount;
     }
-    
+
+    public void AddScoreKill()
+    {
+        scoreAmount += 1;
+    }
+
+
     public void AddHighScore(int score)
     {
         if (score > highScore)

@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Bomb
   - GameOverUI
+  - ScoreManager
   layers:
   - Default
   - TransparentFX

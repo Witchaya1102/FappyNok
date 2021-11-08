@@ -11,11 +11,10 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject GameOverUI;
 
-
     void Start()
     {
         rb.velocity = transform.right * speed;
-        
+
     }    
 
 
@@ -43,4 +42,5 @@ public class Bullet : MonoBehaviour
         GameOverUI.SetActive(true);
     }
 
+   
 }
