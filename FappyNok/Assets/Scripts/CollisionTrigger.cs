@@ -10,7 +10,7 @@ public class CollisionTrigger : MonoBehaviour
     {
         bool isPlayerDead = false;
         public GameObject GameOverUI;
-        
+        //new code
 
 
         void OnCollisionEnter2D(Collision2D collision)
