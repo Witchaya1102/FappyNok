@@ -1018,6 +1018,7 @@ GameObject:
   - component: {fileID: 1952594646}
   - component: {fileID: 1952594648}
   - component: {fileID: 1952594649}
+  - component: {fileID: 1952594650}
   m_Layer: 0
   m_Name: Obstacle_Spawner
   m_TagString: Untagged
@@ -1085,6 +1086,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   queueTime: 4
   obstacle: {fileID: 1264553552912079310, guid: 8cc21c4034cd9c24da33588c113f75ce,
+    type: 3}
+  height: 4
+--- !u!114 &1952594650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952594645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d216d92d3056cf24c9fb3f74fb5353e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  queueTime: 7
+  obstacle: {fileID: 3909770052394817878, guid: 3323fce793aca684a81d51824d1e1769,
     type: 3}
   height: 4
 --- !u!1 &1978762242
