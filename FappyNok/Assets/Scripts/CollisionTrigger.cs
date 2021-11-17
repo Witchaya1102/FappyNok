@@ -10,22 +10,67 @@ public class CollisionTrigger : MonoBehaviour
     {
         bool isPlayerDead = false;
         public GameObject GameOverUI;
-        //new code
+    //new code
 
+    GameObject shield;
 
-        void OnCollisionEnter2D(Collision2D collision)
+    private void Start()
+    {
+        shield = transform.Find("Shield").gameObject;
+        DeactivateShield();
+    }
+
+    void ActivateShield()
+    {
+        shield.SetActive(true);
+    }
+
+    void DeactivateShield()
+    {
+        shield.SetActive(false);
+    }
+
+    bool HasShield()
+    {
+        return shield.activeSelf;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        PowerUp powerUp = collision.GetComponent<PowerUp>();
+        if(powerUp)
         {
+            if(powerUp.activateShield)
+            {
+                ActivateShield();
+            }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+        {
+            
 
             if (collision.gameObject.tag == "Enemy") //for player
             {
-                Debug.Log("Player Dead");
-                isPlayerDead = true;
+                if(HasShield())
+                {
+                    DeactivateShield();
+                    Destroy(collision.collider.gameObject);
+                }
+                else
+                {
+                    Debug.Log("Player Dead");
+                    isPlayerDead = true;
+                }
+                
             }
 
             if (collision.gameObject.tag == "Bomb") //for player
             {
-                Debug.Log("Player Dead");
-                isPlayerDead = true;
+                
+                    Debug.Log("Player Dead");
+                    isPlayerDead = true;
             }
 
             if (collision.gameObject.tag == "Finish") //for de-spawn enemy/bullet
