@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        Time.timeScale = 0f;
     }
 
  
@@ -35,6 +36,15 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKey("space"))
         {
             rigidBody.velocity = Vector2.up * velocity;
+        }
+
+        if (Input.GetKey("q"))
+        {
+            Time.timeScale = 1f;
+        }
+        if (Input.GetKey("e"))
+        {
+            Time.timeScale = 0f;
         }
     }
 }
