@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 406b38030bf2acf4e8d4a3c0989b6b40
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7974443114900830062
+    second: Ghost_Pharaoh_Idle_0
+  - first:
+      213: -1314917232429353396
+    second: Ghost_Pharaoh_Idle_1
+  - first:
+      213: -4770503018782245848
+    second: Ghost_Pharaoh_Idle_2
+  - first:
+      213: 1196977418898735069
+    second: Ghost_Pharaoh_Idle_3
+  - first:
+      213: -6794802302039296041
+    second: Ghost_Pharaoh_Idle_4
+  - first:
+      213: 8093574381363065427
+    second: Ghost_Pharaoh_Idle_5
+  - first:
+      213: -4500199227325885283
+    second: Ghost_Pharaoh_Idle_6
+  - first:
+      213: 2171337432512253119
+    second: Ghost_Pharaoh_Idle_7
+  - first:
+      213: -5140929158287106929
+    second: Ghost_Pharaoh_Idle_8
+  - first:
+      213: -1551027165919914068
+    second: Ghost_Pharaoh_Idle_9
+  - first:
+      213: -3571335206244480662
+    second: Ghost_Pharaoh_Idle_10
+  - first:
+      213: 3382074578760663866
+    second: Ghost_Pharaoh_Idle_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +76,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +107,285 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 8055
+        width: 2494
+        height: 2447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298c6c6cc36155190800000000000000
+      internalID: -7974443114900830062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 2982
+        y: 8008
+        width: 2489
+        height: 2494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46320c6eb970cde0800000000000000
+      internalID: -1314917232429353396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 5677
+        y: 8055
+        width: 2494
+        height: 2447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c3e8597c4cbcdb0800000000000000
+      internalID: -4770503018782245848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 8158
+        y: 8008
+        width: 2492
+        height: 2494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf7f91ee948c9010800000000000000
+      internalID: 1196977418898735069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 5403
+        width: 2494
+        height: 2451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7f0f38e4304b1a0800000000000000
+      internalID: -6794802302039296041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 2982
+        y: 5324
+        width: 2489
+        height: 2494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352f85ca407225070800000000000000
+      internalID: 8093574381363065427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 5669
+        y: 5403
+        width: 2492
+        height: 2451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94d0c455a41c81c0800000000000000
+      internalID: -4500199227325885283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 8158
+        y: 5360
+        width: 2492
+        height: 2494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbcc66004e3222e10800000000000000
+      internalID: 2171337432512253119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 2676
+        width: 2494
+        height: 2452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c59d81b20c7a8b0800000000000000
+      internalID: -5140929158287106929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 2982
+        y: 2634
+        width: 2489
+        height: 2494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7dc52a205a97ae0800000000000000
+      internalID: -1551027165919914068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 5677
+        y: 2676
+        width: 2494
+        height: 2452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6983f93d81107ec0800000000000000
+      internalID: -3571335206244480662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ghost_Pharaoh_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 8158
+        y: 2634
+        width: 2492
+        height: 2494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3388ee09ea8fee20800000000000000
+      internalID: 3382074578760663866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
