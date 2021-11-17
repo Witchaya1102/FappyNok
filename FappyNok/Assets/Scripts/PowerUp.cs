@@ -6,6 +6,8 @@ public class PowerUp : MonoBehaviour
 {
     public float speed;
 
+    public bool activateShield;
+
     //public GameObject pickupEffect;
 
     void Update()
