@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1264553552912079311}
   - component: {fileID: 1879588774913724209}
   - component: {fileID: 6218732397668732678}
+  - component: {fileID: 7146274793149911438}
   m_Layer: 1
   m_Name: Ghost_Pharaoh
   m_TagString: Enemy
@@ -122,3 +123,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!95 &7146274793149911438
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264553552912079310}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0964a78e45fd5ad48b94f3237287c0ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
