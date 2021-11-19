@@ -42,5 +42,4 @@ public class Bullet : MonoBehaviour
         GameOverUI.SetActive(true);
     }
 
-   
 }

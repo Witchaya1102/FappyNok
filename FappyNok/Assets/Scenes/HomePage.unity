@@ -790,8 +790,6 @@ GameObject:
   - component: {fileID: 2101782747}
   - component: {fileID: 2101782746}
   - component: {fileID: 2101782745}
-  - component: {fileID: 2101782749}
-  - component: {fileID: 2101782748}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -862,8 +860,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2101782749}
-        m_MethodName: click
+      - m_Target: {fileID: 664236422}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -910,31 +908,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101782743}
   m_CullTransparentMesh: 0
---- !u!111 &2101782748
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101782743}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 0603a1e050b342a488b4ed39179c48b9, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &2101782749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101782743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98bf94f9277b31343b74a30f8f8927b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
