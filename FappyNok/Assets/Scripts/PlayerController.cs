@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
             rigidBody.velocity = Vector2.up * velocity;
         }
 
-        if (Input.GetKey("q"))
+        if (Input.GetKey("space"))
         {
             Time.timeScale = 1f;
         }
