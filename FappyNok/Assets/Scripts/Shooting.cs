@@ -23,8 +23,9 @@ public class Shooting : MonoBehaviour
         
         if (Time.time > nextFireTime)
         {
-           if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
+                SoundManager.Instance.Play(SoundManager.Sound.PlayerMissile);
                 Shoot();
                 nextFireTime = Time.time + cooldownTime;
             } 

@@ -1,36 +1,77 @@
-using UnityEngine.Audio;
+using System;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
-{
-    public static AudioClip Firesound, Deadsound;
-    static AudioSource audioSrc;
-    
-    // Start is called before the first frame update
-    void Start()
+    public class SoundManager :MonoBehaviour
     {
-        Firesound = Resources.Load<AudioClip>("Fire");
-        Deadsound = Resources.Load<AudioClip>("Dead");
+        [SerializeField] private SoundClip[] soundClips;
 
-        audioSrc = GetComponent<AudioSource> ();
-    }
+        public static SoundManager Instance { get; private set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public static void Playsound(string clip)
-    {
-        switch (clip)
+        public void Awake()
         {
-            case "Fire":
-                audioSrc.PlayOneShot(Firesound);
-                break;
-            case "Dead":
-                audioSrc.PlayOneShot(Deadsound);
-                break;
+            Debug.Assert(soundClips != null && soundClips.Length != 0,"Sound clips need to be setup");
+
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);                
+            }
+        }
+
+        public void Stop()
+        {
+            SoundManager.Destroy(gameObject);
+        }
+
+        private void Start()
+        {
+            Play(SoundManager.Sound.Music);
+        }
+
+        public enum Sound
+        {
+            Music,
+            PlayerMissile,
+            PlayerDead,
+            PlayerFly
+        }
+        
+        [Serializable]
+        public class SoundClip
+        {
+            public Sound sound;
+            public AudioClip audioClip;
+            [Range(0,1)] public float soundVolume;
+            public bool loop = false;
+            [HideInInspector]
+            public AudioSource audioSource;
+        }
+        public void Play(Sound sound)
+        {
+            var soundClip = GetSoundClip(sound);
+            if (soundClip.audioSource == null)
+            {   
+                soundClip.audioSource = gameObject.AddComponent<AudioSource>();
+            }
+            soundClip.audioSource.clip = soundClip.audioClip;
+            soundClip.audioSource.volume = soundClip.soundVolume;
+            soundClip.audioSource.loop = soundClip.loop;
+            soundClip.audioSource.Play();
+        }
+
+        private SoundClip GetSoundClip(Sound sound)
+        {
+            foreach (var soundClip in soundClips)
+            {
+                if (soundClip.sound == sound)
+                {
+                    return soundClip;
+                }
+            }
+            return null;
         }
     }
-    
-}
