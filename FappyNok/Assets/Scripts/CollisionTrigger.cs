@@ -10,6 +10,7 @@ public class CollisionTrigger : MonoBehaviour
     {
         bool isPlayerDead = false;
         public GameObject GameOverUI;
+        public AudioSource BGM;
     //new code
 
     GameObject shield;
@@ -88,8 +89,9 @@ public class CollisionTrigger : MonoBehaviour
 
         public void GameOver()
         {
+            BGM.Stop();
             Time.timeScale = 0f;
-        GameOverUI.SetActive(true);
+            GameOverUI.SetActive(true);
         }
 
     }   
