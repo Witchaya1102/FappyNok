@@ -3,10 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
-    public void click()
-    {
-        GetComponent<Animation>().Play("Button_Click");
-    }
     public void Play()
     {
 
