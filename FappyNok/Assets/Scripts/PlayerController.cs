@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     public float velocity = 50f;
     private Rigidbody2D rigidBody;
     public GameObject spacetostartText;
+    public GameObject controlsTipsText;
 
 
     void Start()
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey("space"))
         {
             spacetostartText.SetActive(false);
+            controlsTipsText.SetActive(false);
             Time.timeScale = 1f;
         }
         if (Input.GetKey("e"))

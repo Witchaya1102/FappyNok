@@ -9,6 +9,7 @@ TagManager:
   - Bomb
   - GameOverUI
   - ScoreManager
+  - End_BG
   layers:
   - Default
   - TransparentFX
