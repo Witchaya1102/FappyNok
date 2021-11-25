@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Animation.cs" t="Include" />
+          <e p="BG_Collide.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
           <e p="CollisionTrigger.cs" t="Include" />
           <e p="Enemy_Bomb.cs" t="Include" />

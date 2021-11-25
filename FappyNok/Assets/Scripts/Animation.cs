@@ -23,5 +23,15 @@ public class Animation : MonoBehaviour
         {
             anim.SetInteger("Anima", 0);
         }
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            anim.SetInteger("Anima", -1);
+        }
+        
+        if (Input.GetMouseButtonUp(0))
+        {
+            anim.SetInteger("Anima", 0);
+        }
     }
 }
