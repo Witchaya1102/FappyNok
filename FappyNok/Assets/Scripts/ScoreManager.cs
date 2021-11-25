@@ -14,6 +14,7 @@ public class ScoreManager : MonoBehaviour
     public float scoreAmount;
     public int scoreIncreasedPerSecond;
     
+    
 
     void Start()
     {
