@@ -29,12 +29,12 @@ using UnityEngine;
 
         private void Start()
         {
-            Play(SoundManager.Sound.Music);
+            //Play(SoundManager.Sound.Music);
         }
 
         public enum Sound
         {
-            Music,
+            //Music,
             PlayerMissile,
             PlayerDead,
             PlayerFly
