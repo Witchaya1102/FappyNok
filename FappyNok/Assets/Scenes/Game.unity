@@ -381,6 +381,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 887612823}
+--- !u!1 &390856281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390856284}
+  - component: {fileID: 390856283}
+  - component: {fileID: 390856282}
+  m_Layer: 5
+  m_Name: HighScore_InGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &390856282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390856281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 17534c18624ff3c49ba84a7fbe9cab61, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &390856283
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390856281}
+  m_CullTransparentMesh: 0
+--- !u!224 &390856284
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390856281}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 780430925}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 308.9999, y: 170.7}
+  m_SizeDelta: {x: 140.89197, y: 29.002625}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +572,7 @@ RectTransform:
   m_LocalScale: {x: 3.0900512, y: 3.0900512, z: 3.0900512}
   m_Children: []
   m_Father: {fileID: 780430925}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -533,7 +611,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'SPACEBARE - JUMP
+  m_Text: 'SPACEBAR - JUMP
 
     LEFT CLICK - SHOOT'
 --- !u!222 &542715802
@@ -976,6 +1054,7 @@ RectTransform:
   m_Children:
   - {fileID: 344210117}
   - {fileID: 12576201}
+  - {fileID: 390856284}
   - {fileID: 593163550}
   - {fileID: 542715800}
   m_Father: {fileID: 0}
@@ -1159,6 +1238,7 @@ MonoBehaviour:
   scoreText: {fileID: 12576199}
   scoreTextGameOver: {fileID: 1992747603}
   highScoreTextGameOver: {fileID: 182533176}
+  highScoreTextInGame: {fileID: 390856282}
   highScore: 0
   scoreAmount: 0
   scoreIncreasedPerSecond: 0
@@ -1919,6 +1999,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: 17534c18624ff3c49ba84a7fbe9cab61,
         type: 3}
+    - target: {fileID: 6367294677586777569, guid: e4e3a6a48bd4f52469279bf8216b3e5d,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367294677586777569, guid: e4e3a6a48bd4f52469279bf8216b3e5d,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367294677586777582, guid: e4e3a6a48bd4f52469279bf8216b3e5d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367294677586777583, guid: e4e3a6a48bd4f52469279bf8216b3e5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6367294677805226528, guid: e4e3a6a48bd4f52469279bf8216b3e5d,
         type: 3}
       propertyPath: m_IsActive
@@ -1967,7 +2067,7 @@ PrefabInstance:
     - target: {fileID: 6367294677966675143, guid: e4e3a6a48bd4f52469279bf8216b3e5d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6367294677966675143, guid: e4e3a6a48bd4f52469279bf8216b3e5d,
         type: 3}
@@ -2081,6 +2181,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: 17534c18624ff3c49ba84a7fbe9cab61,
         type: 3}
+    - target: {fileID: 6367294678729769866, guid: e4e3a6a48bd4f52469279bf8216b3e5d,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6367294678729769866, guid: e4e3a6a48bd4f52469279bf8216b3e5d,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6367294678885049956, guid: e4e3a6a48bd4f52469279bf8216b3e5d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

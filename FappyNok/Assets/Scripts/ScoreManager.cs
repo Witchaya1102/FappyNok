@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     public Text scoreText;
     public Text scoreTextGameOver;
     public Text highScoreTextGameOver;
+    public Text highScoreTextInGame;
     public int highScore;
     public float scoreAmount;
     public int scoreIncreasedPerSecond;
@@ -36,6 +37,8 @@ public class ScoreManager : MonoBehaviour
         AddHighScore((int)scoreAmount);
         
         scoreTextGameOver.text = "SCORE: " + (int)scoreAmount;
+        highScoreTextGameOver.text = "HIGHSCORE: " + highScore;
+        highScoreTextInGame.text = "HIGHSCORE: " + (int)highScore;
     }
 
     public void AddScoreKill()
@@ -50,7 +53,7 @@ public class ScoreManager : MonoBehaviour
         {
             highScore = score;
             PlayerPrefs.SetInt("HighScore", highScore);
-            highScoreTextGameOver.text = "HIGHSCORE: " + highScore;
+            
         }
     }
 
