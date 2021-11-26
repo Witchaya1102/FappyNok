@@ -44,7 +44,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey("space"))
         {
             spacetostartText.SetActive(false);
-            controlsTipsText.SetActive(false);
             Time.timeScale = 1f;
         }
         if (Input.GetKey("e"))
