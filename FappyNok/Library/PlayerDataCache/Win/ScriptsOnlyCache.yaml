@@ -24,7 +24,10 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
+<<<<<<< HEAD
     - Packages.Rider.Editor.RiderScriptEditorData
+=======
+>>>>>>> bf47a5158cd4a9237d9f871604ac15182854ec56
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -153,18 +156,24 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+<<<<<<< HEAD
     - Class: 74
       Script: {instanceID: 0}
+=======
+>>>>>>> bf47a5158cd4a9237d9f871604ac15182854ec56
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+<<<<<<< HEAD
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
+=======
+>>>>>>> bf47a5158cd4a9237d9f871604ac15182854ec56
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -788,4 +797,8 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/HomePage.unity
   - Assets/Scenes/Game.unity
+<<<<<<< HEAD
   playerPath: C:/Users/Stealth/Desktop/FappyNok.exe
+=======
+  playerPath: D:/FappyNok The Game/FappyNok.exe
+>>>>>>> bf47a5158cd4a9237d9f871604ac15182854ec56
